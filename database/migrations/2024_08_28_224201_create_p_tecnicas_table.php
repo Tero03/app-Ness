@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('tiro_arco_precision_potencia'); 
             $table->string('tiro_arco_movimiento'); 
             $table->unsignedBigInteger('id_persona');
- 
+
             $table->foreign('id_persona')->references('id')->on('personas');
             $table->timestamps();
         });

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('posicion');
             $table->string('resultado');
             $table->unsignedBigInteger('id_persona');
- 
+
             $table->foreign('id_persona')->references('id')->on('personas');
             $table->timestamps();
         });

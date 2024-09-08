@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('p_fisicas', function (Blueprint $table) {
             $table->id();
-            $table->string('sprint_40m');
+            $table->string('sprint_40m');//revisar si es necesario recibir los datos como integer
             $table->string('sprint_30m');
             $table->string('peso_muerto');
             $table->string('sentadillas');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('salto_vertical');
             $table->string('salto_horizontal');
             $table->unsignedBigInteger('id_persona');
- 
+
             $table->foreign('id_persona')->references('id')->on('personas');
             $table->timestamps();
         });

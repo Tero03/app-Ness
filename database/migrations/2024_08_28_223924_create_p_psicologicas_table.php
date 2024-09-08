@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('resultado5');
             $table->string('resultado6');
             $table->unsignedBigInteger('id_persona');
- 
+
             $table->foreign('id_persona')->references('id')->on('personas');
             $table->timestamps();
         });

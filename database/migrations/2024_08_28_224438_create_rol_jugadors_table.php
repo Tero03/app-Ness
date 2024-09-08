@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('id_posicion');
             $table->string('nombre');
             $table->unsignedBigInteger('id_jugador');
- 
+
             $table->foreign('id_jugador')->references('id')->on('jugadors');
             $table->timestamps();
         });

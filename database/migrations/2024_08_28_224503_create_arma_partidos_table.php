@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('arma_partidos', function (Blueprint $table) {
             $table->id();
-            $table->string('fecha');
+            $table->date('fecha');
             $table->unsignedBigInteger('id_tipo_partido');
- 
+
             $table->foreign('id_tipo_partido')->references('id')->on('tipo_partidos');
             $table->timestamps();
         });

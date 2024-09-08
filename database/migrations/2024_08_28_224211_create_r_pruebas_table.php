@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_Pfisica');
             $table->unsignedBigInteger('id_Ptecnica');
             $table->unsignedBigInteger('Id_Pgrupos');
- 
+
             $table->foreign('id_persona')->references('id')->on('personas');
             $table->foreign('id_Pfisica')->references('id')->on('p_fisicas');
             $table->foreign('id_Ptecnica')->references('id')->on('p_tecnicas');

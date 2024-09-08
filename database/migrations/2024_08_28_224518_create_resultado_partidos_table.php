@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('resultado_partido');
             $table->unsignedBigInteger('id_partido');
             $table->unsignedBigInteger('id_jugador');
- 
+
             $table->foreign('id_partido')->references('id')->on('arma_partidos');
             $table->foreign('id_jugador')->references('id')->on('jugadors');
             $table->timestamps();

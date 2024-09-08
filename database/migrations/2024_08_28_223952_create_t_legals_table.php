@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('correo');
             $table->string('documento');
             $table->unsignedBigInteger('id_persona');
- 
+
             $table->foreign('id_persona')->references('id')->on('personas');
             $table->timestamps();
         });
