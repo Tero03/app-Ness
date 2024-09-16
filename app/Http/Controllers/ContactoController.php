@@ -9,6 +9,7 @@ use App\Models\Contacto;
 class ContactoController extends Controller
 {
     public function getData(Request $request){
+
         $contacto=Contacto::all();
         
         return response()->json([
@@ -16,6 +17,7 @@ class ContactoController extends Controller
             'result'=>$contacto
         ]);
     }
+
     public function save(Request $request){
 
         $contactos=Contacto::create([
@@ -30,13 +32,26 @@ class ContactoController extends Controller
             "Rta datos"=>$contactos
         ]);
     }
+
     public function update(Request $request){
+
+        $contacto=Contacto::FindOrFail($request->id);
+        $contacto->update([
+            "telefono"=>$request->telefono,
+            "correo"=>$request->correo
+        ]);
+
         return response()->json([
             'status'=>'200',
             'message'=>'Datos actualizados con exito contacto',
         ]);
     }
+
     public function delete(Request $request){
+
+        $contacto=Contacto::FindOrFail($request->id);
+        $contacto->delete();
+
         return response()->json([
             'status'=>'200',
             'message'=>'Datos eliminados con exito contacto',

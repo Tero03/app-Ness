@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Resultado_partido extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        "marcador",
+        "resultado_partido",
+        "id_partido",
+        "id_persona"
+    ];
 }
