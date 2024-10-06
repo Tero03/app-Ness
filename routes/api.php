@@ -16,9 +16,9 @@ use App\Http\Controllers\PPsicologicaController;
 use App\Http\Controllers\PTecnicaController;
 use App\Http\Controllers\ResultadoPartidoController;
 use App\Http\Controllers\RolJugadorController;
-use App\Http\Controllers\RPruebaController;
 use App\Http\Controllers\TipoPartidoController;
 use App\Http\Controllers\TLegalController;
+use App\Http\Controllers\RPruebaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -134,17 +134,17 @@ Route::controller(RolJugadorController::class)->group(function(){
 });
 
 Route::controller(RPruebaController::class)->group(function(){
-    Route::get('/rprueba/datos','getData');
-    Route::post('/rprueba/guardar','save');
-    Route::put('/rprueba/actualizar','update');
-    Route::delete('/rprueba/eliminar','delete');
+    Route::get('/rprueba/datos', 'getData');
+    Route::post('/rprueba/guardar', 'save');
+    Route::put('/rprueba/actualizar', 'update');
+    Route::delete('/rprueba/eliminar', 'delete');
 });
 
 Route::controller(TipoPartidoController::class)->group(function(){
     Route::get('/tipopartido/datos','getData');
     Route::post('/tipopartido/guardar','save');
-    Route::put('/tipopartido/actualizar','update');
     Route::delete('/tipopartido/eliminar','delete');
+    Route::put('/tipopartido/actualizar','update');
 });
 
 Route::controller(TLegalController::class)->group(function(){

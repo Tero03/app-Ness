@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Arma_partido extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        "fecha",
+        "id_tipo_partido"
+    ];
 }

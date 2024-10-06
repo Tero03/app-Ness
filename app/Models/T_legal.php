@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class T_legal extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        "nombre",
+        "apellido",
+        "telefono",
+        "correo",
+        "documento",
+        "id_persona"
+    ];
 }

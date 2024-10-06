@@ -4,30 +4,53 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Contacto;
 
 class ContactoController extends Controller
 {
     public function getData(Request $request){
-        $rta=10+20;
+
+        $contacto=Contacto::all();
+        
         return response()->json([
-            'status'=>'200',
             'message'=>'Datos obtenidos con exito contacto',
-            'result'=>$rta
+            'result'=>$contacto
         ]);
     }
+
     public function save(Request $request){
+
+        $contactos=Contacto::create([
+            "telefono"=>$request->telefono,
+            "correo"=>$request->correo,
+            "id_persona"=>$request->id_persona
+        ]);
+
         return response()->json([
             'status'=>'200',
             'message'=>'Datos guardados con exito contacto',
         ]);
     }
+
     public function update(Request $request){
+
+        $contacto=Contacto::FindOrFail($request->id);
+        $contacto->update([
+            "telefono"=>$request->telefono,
+            "correo"=>$request->correo
+        ]);
+
         return response()->json([
             'status'=>'200',
             'message'=>'Datos actualizados con exito contacto',
         ]);
     }
+
     public function delete(Request $request){
+
+        $contacto=Contacto::FindOrFail($request->id);
+        $contacto->delete();
+
         return response()->json([
             'status'=>'200',
             'message'=>'Datos eliminados con exito contacto',
