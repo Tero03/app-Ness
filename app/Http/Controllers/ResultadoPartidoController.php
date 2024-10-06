@@ -37,7 +37,7 @@ class ResultadoPartidoController extends Controller
     public function update(Request $request){
 
         $Rpartido=Resultado_partido::FindOrFail($request->id);
-        $Rpartido=Resultado_partido::create([
+        $Rpartido->update([
             "marcador"=>$request->marcador,
             "resultado_partido"=>$request->resultado_partido,
             "id_jugador"=>$request->id_jugador

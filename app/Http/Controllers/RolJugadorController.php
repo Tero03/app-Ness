@@ -36,7 +36,7 @@ class RolJugadorController extends Controller
     public function update(Request $request){
 
         $Rjugador=Rol_jugador::FindOrFail($request->id);
-        $Rjugador=Rol_jugador::update([
+        $Rjugador->update([
             "id_posicion"=>$request->id_posicion,
             "nombre"=>$request->nombre
         ]);

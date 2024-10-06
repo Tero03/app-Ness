@@ -13,6 +13,6 @@ class Resultado_partido extends Model
         "marcador",
         "resultado_partido",
         "id_partido",
-        "id_persona"
+        "id_jugador"
     ];
 }

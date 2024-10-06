@@ -29,7 +29,6 @@ class ContactoController extends Controller
         return response()->json([
             'status'=>'200',
             'message'=>'Datos guardados con exito contacto',
-            "Rta datos"=>$contactos
         ]);
     }
 
