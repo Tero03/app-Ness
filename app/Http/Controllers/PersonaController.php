@@ -17,6 +17,16 @@ class PersonaController extends Controller{
         ]);
     }
 
+    public function getDataById(Request $request){
+        
+        $miPersona=Persona::where('id',$request->id)->get();
+
+        return response()->json([
+            'message'=>'Datos obtenidos con exito',
+            'result'=>$miPersona
+        ]);
+    }
+
     public function save(Request $request){
 
         $miPersona=Persona::create([

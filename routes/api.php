@@ -58,6 +58,7 @@ Route::controller(EquipoController::class)->group(function(){
 
 Route::controller(PersonaController::class)->group(function(){
     Route::get('/persona/datos','getData');
+    Route::get('/persona/datosById','getDataById');
     Route::post('/persona/guardar','save');
     Route::put('/persona/actualizar','update');
     Route::delete('/persona/eliminar','delete');
