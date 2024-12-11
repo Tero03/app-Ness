@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->integer('edad');//es necesario agregar una restriccion no mas de 120 años o menos
-            $table->string('peso');
-            $table->string('altura');
+            $table->Integer('peso');
+            $table->Integer('altura');
             $table->timestamps();
         });
     }

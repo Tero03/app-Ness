@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Persona;
 
 class PersonaController extends Controller{
+    
     public function getData(Request $request){
         
         $miPersona=Persona::all();
