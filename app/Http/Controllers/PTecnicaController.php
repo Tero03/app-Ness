@@ -19,6 +19,16 @@ class PTecnicaController extends Controller
         ]);
     }
 
+    public function getDataById(Request $request){
+        
+        $Ptecnica=P_tecnica::where('id',$request->id)->get();
+
+        return response()->json([
+            'message'=>'Datos obtenidos con exito',
+            'result'=>$Ptecnica
+        ]);
+    }
+
     public function save(Request $request){
 
         $Ptecnica=P_tecnica::create([

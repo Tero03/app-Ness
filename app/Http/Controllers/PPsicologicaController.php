@@ -19,6 +19,16 @@ class PPsicologicaController extends Controller
         ]);
     }
 
+    public function getDataById(Request $request){
+        
+        $Ppsicologica=P_psicologica::where('id',$request->id)->get();
+
+        return response()->json([
+            'message'=>'Datos obtenidos con exito',
+            'result'=>$Ppsicologica
+        ]);
+    }
+
     public function save(Request $request){
 
         $Ppsicologica=P_psicologica::create([

@@ -94,6 +94,7 @@ Route::controller(PartidoJugadorController::class)->group(function(){
 
 Route::controller(PFisicaController::class)->group(function(){
     Route::get('/pfisica/datos','getData');
+    Route::get('/pfisica/datosById','getDataById');
     Route::post('/pfisica/guardar','save');
     Route::put('/pfisica/actualizar','update');
     Route::delete('/pfisica/eliminar','delete');
@@ -108,6 +109,7 @@ Route::controller(PGrupoController::class)->group(function(){
 
 Route::controller(PPsicologicaController::class)->group(function(){
     Route::get('/psicologica/datos','getData');
+    Route::get('/psicologica/datosById','getDataById');
     Route::post('/psicologica/guardar','save');
     Route::put('/psicologica/actualizar','update');
     Route::delete('/psicologica/eliminar','delete');
@@ -115,6 +117,7 @@ Route::controller(PPsicologicaController::class)->group(function(){
 
 Route::controller(PTecnicaController::class)->group(function(){
     Route::get('/ptecnica/datos','getData');
+    Route::get('/ptecnica/datosById','getDataById');
     Route::post('/ptecnica/guardar','save');
     Route::put('/ptecnica/actualizar','update');
     Route::delete('/ptecnica/eliminar','delete');

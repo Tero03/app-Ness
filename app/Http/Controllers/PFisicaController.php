@@ -19,6 +19,16 @@ class PFisicaController extends Controller
         ]);
     }
 
+    public function getDataById(Request $request){
+        
+        $Pfisica=P_fisica::where('id',$request->id)->get();
+
+        return response()->json([
+            'message'=>'Datos obtenidos con exito',
+            'result'=>$Pfisica
+        ]);
+    }
+
     public function save(Request $request){
 
         $Pfisica=P_fisica::create([
